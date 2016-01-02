@@ -4,8 +4,6 @@ import HeaderMessages       from './header-messages'
 import HeaderNotifications  from './header-notifications'
 import HeaderTasks          from './header-tasks'
 
-
-
 class HeaderBar extends React.Component {
 
     constructor(props) {
@@ -102,6 +100,7 @@ class HeaderBar extends React.Component {
     }
 
     render() {
+
         var that = this;
         return (
             <header className="main-header">
@@ -147,13 +146,13 @@ class HeaderBar extends React.Component {
                             {/* User Account: style can be found in dropdown.less */}
                             <li className="dropdown user user-menu">
                                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="dist/img/user2-160x160.jpg" className="user-image" alt="User Image" />
+                                    <img src={require("../../images/user2-160x160.jpg")} className="user-image" alt="User Image" />
                                     <span className="hidden-xs">Alexander Pierce</span>
                                 </a>
                                 <ul className="dropdown-menu">
                                     {/* User image */}
                                     <li className="user-header">
-                                        <img src="dist/img/user2-160x160.jpg" className="img-circle" alt="User Image" />
+                                        <img src={require("../../images/user2-160x160.jpg")} className="img-circle" alt="User Image" />
                                         <p>
                                             Alexander Pierce - Web Developer
                                             <small>Member since Nov. 2012</small>

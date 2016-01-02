@@ -12,5 +12,6 @@ debug('Create configuration.');
 // https://webpack.github.io/docs/configuration.html#devtool
 debug('Override devtool with cheap-module-eval-source-map.')
 webpackConfig.devtool = 'cheap-module-eval-source-map';
+debug(webpackConfig)
 
 export default webpackConfig;

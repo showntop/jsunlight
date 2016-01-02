@@ -9,11 +9,11 @@ import routes                   from './routes';
 
 import createBrowserHistory   from 'history/lib/createBrowserHistory';
 
-require('./styles/_base.scss');
-
 
 import Root                   from './containers/Root';
 
+import 'styles/main.css';
+import 'styles/skins/skin-blue.css';
 
 const rootElement  = document.getElementById('root');
 const history = createBrowserHistory();
@@ -32,9 +32,7 @@ let injectTapEventPlugin = require('react-tap-event-plugin');
 // );
 
 let unsubscribe = store.subscribe(() => {
-  debugger;
-  console.log(store.getState());
-
+    console.log(store.getState());
   }
 )
 

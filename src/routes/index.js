@@ -1,12 +1,13 @@
 import React                 from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import Root                  from 'containers/Root';
+
+// import CoreLayout             from 'layouts/core-layout';
+import Root                   from 'containers/Root';
 import DeptsView              from 'containers/Dept';
 import UsersView              from 'containers/Users';
 import RolesView              from 'containers/Role';
 import PermissionsView        from 'containers/Permission';
-
 
 export default (
   <Route        component={Root} path='/'>
