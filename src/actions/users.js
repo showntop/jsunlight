@@ -1,11 +1,38 @@
-import { REQUEST_USERS, RECEIVE_USERS } from 'constants/ActionTypes';
+import { REQUEST_USERS, RECEIVE_USERS, CREATED_USER } from 'constants/ActionTypes';
 
 import fetch           from 'isomorphic-fetch'
+
+export function createUser (user) {
+  // Thunk middleware 知道如何处理函数。
+  // 这里把 dispatch 方法通过参数的形式传给函数，
+  // 以此来让它自己也能 dispatch action。
+
+  return function (dispatch) {
+
+    //dispatch(requestUsers())
+
+    return fetch('http://localhost:3000/v1/users.json',{ 'Access-Control-Allow-Origin': '*', method: 'post' })
+      .then(response => response.json())
+      .then(json =>
+        dispatch(createdUser(json))
+      )
+
+      // 在实际应用中，还需要
+      // 捕获网络请求的异常。
+  }
+
+}
+
+function createdUser (result) {
+  return {
+    type: CREATED_USER,
+    result
+  }
+}
 
 function requestUsers () {
   return { type : REQUEST_USERS };
 }
-
 
 function receiveUsers (result) {
   return { type : RECEIVE_USERS, items: result.users };

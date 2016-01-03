@@ -15,6 +15,8 @@ import Root                   from './containers/Root';
 import 'styles/main.css';
 import 'styles/skins/skin-blue.css';
 
+import 'react-datagrid/index.css';
+
 const rootElement  = document.getElementById('root');
 const history = createBrowserHistory();
 const store   = configureStore(window.__INITIAL_STATE__, __DEBUG__);

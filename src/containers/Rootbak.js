@@ -7,7 +7,7 @@ import { createDevToolsWindow } from '../utils';
 
 import Header                   from "../components/header";
 
-export default class Root extends React.Component {
+export default class Rootfdfs extends React.Component {
   static propTypes = {
     history : React.PropTypes.object.isRequired,
     store   : React.PropTypes.object.isRequired,

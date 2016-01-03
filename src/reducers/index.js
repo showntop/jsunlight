@@ -1,7 +1,7 @@
 import { combineReducers }    from 'redux';
 import { routeReducer }       from 'redux-simple-router';
-import users                  from './users';
+import user                   from './user';
 
 export default combineReducers({
-  users
+  user
 });

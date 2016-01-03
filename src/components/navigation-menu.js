@@ -29,52 +29,33 @@ class NavigationMenu extends React.Component {
                     {/* /.search form */}
                     {/* sidebar menu: : style can be found in sidebar.less */}
                     <ul className="sidebar-menu">
-                        <li className="header">MAIN NAVIGATION</li>
+                        <li className="header">功能区</li>
                         <li className="active treeview">
                             <a href="#">
                                 <i className="fa fa-dashboard"></i> 
                                 <span>
-                                    Dashboard
+                                    用户管理
                                 </span> 
-                                <i className="fa fa-angle-left pull-right"></i>
                             </a>
-                            <ul className="treeview-menu">
-                                <li className="active"><a href="index.html"><i className="fa fa-circle-o"></i> Dashboard v1</a></li>
-                                <li><a href="index2.html"><i className="fa fa-circle-o"></i> Dashboard v2</a></li>
-                            </ul>
                         </li>
                         <li className="treeview">
                             <a href="#">
                                 <i className="fa fa-files-o"></i>
-                                <span>Layout Options</span>
-                                <span className="label label-primary pull-right">4</span>
+                                <span>部门管理</span>
                             </a>
-                            <ul className="treeview-menu">
-                                <li><a href="pages/layout/top-nav.html"><i className="fa fa-circle-o"></i> Top Navigation</a></li>
-                                <li><a href="pages/layout/boxed.html"><i className="fa fa-circle-o"></i> Boxed</a></li>
-                                <li><a href="pages/layout/fixed.html"><i className="fa fa-circle-o"></i> Fixed</a></li>
-                                <li><a href="pages/layout/collapsed-sidebar.html"><i className="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-                            </ul>
                         </li>
                         <li>
                             <a href="pages/widgets.html">
                                 <i className="fa fa-th"></i>
-                                <span>Widgets</span> 
-                                <small className="label pull-right bg-green">new</small>
+                                <span>角色管理</span> 
+                                <small className="label pull-right bg-green">新</small>
                             </a>
                         </li>
                         <li className="treeview">
                             <a href="#">
                                 <i className="fa fa-pie-chart"></i>
-                                <span>Charts</span>
-                                <i className="fa fa-angle-left pull-right"></i>
+                                <span>权限配置</span>
                             </a>
-                            <ul className="treeview-menu">
-                                <li><a href="pages/charts/chartjs.html"><i className="fa fa-circle-o"></i> ChartJS</a></li>
-                                <li><a href="pages/charts/morris.html"><i className="fa fa-circle-o"></i> Morris</a></li>
-                                <li><a href="pages/charts/flot.html"><i className="fa fa-circle-o"></i> Flot</a></li>
-                                <li><a href="pages/charts/inline.html"><i className="fa fa-circle-o"></i> Inline charts</a></li>
-                            </ul>
                         </li>
                         <li className="treeview">
                             <a href="#">

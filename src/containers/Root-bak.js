@@ -11,7 +11,7 @@ var {ExpandableNavContainer, ExpandableNavbar, ExpandableNavHeader,
   ExpandableNavMenu, ExpandableNavMenuItem, ExpandableNavPage,
   ExpandableNavToggleButton} = ExpandableNav;
 
-class Root extends React.Component {
+class Rootfdsf extends React.Component {
 
   static propTypes = {
 
@@ -86,4 +86,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps)(Root);
+export default connect(mapStateToProps)(Rootfdsf);

@@ -13,7 +13,7 @@ class Root extends React.Component {
   render () {
     
     return (
-      <DashBoard /> // { ...this.props }/>
+      <DashBoard { ...this.props } /> ///> // 
     );
   }    
 

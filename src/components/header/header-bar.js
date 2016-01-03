@@ -16,7 +16,7 @@ class HeaderBar extends React.Component {
         };
     }
 
-    pushMenu = () => {
+    _pushMenu = () => {
         var body = document.body;
         if(body.clientWidth > 768){
             if(body.className.indexOf('sidebar-collapse') === -1){
@@ -105,18 +105,22 @@ class HeaderBar extends React.Component {
         return (
             <header className="main-header">
                 {/* Logo */}
-                <a href="index2.html" className="logo">
+                <a href="/" className="logo">
                     {/* mini logo for sidebar mini 50x50 pixels */}
-                    <span className="logo-mini"><b>A</b>LT</span>
+                    <span className="logo-mini"><b>S</b>UN</span>
                     {/* logo for regular state and mobile devices */}
-                    <span className="logo-lg"><b>Admin</b>LTE</span>
+                    <span className="logo-lg"><b>sunlight</b>管理平台</span>
                 </a>
                 {/* Header Navbar: style can be found in header.less */}
                 <nav className="navbar navbar-static-top" role="navigation">
                     {/* Sidebar toggle button*/}
-                    <a href="#" className="sidebar-toggle" data-toggle="offcanvas" role="button" onClick={that.pushMenu}>
+                    <a href="#" className="sidebar-toggle" data-toggle="offcanvas" role="button" onClick={that._pushMenu}>
                         <span className="sr-only">Toggle navigation</span>
                     </a>
+                    <ol className="nav navbar-nav navbar-left">
+                        <li><a href="/home"><i className="fa fa-dashboard"></i>主页</a></li>
+                        <li className="active">用户管理</li>
+                    </ol>
                     <div className="navbar-custom-menu">
                         <ul className="nav navbar-nav">
                             {/* Messages: style can be found in dropdown.less*/}
@@ -147,7 +151,7 @@ class HeaderBar extends React.Component {
                             <li className="dropdown user user-menu">
                                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">
                                     <img src={require("../../images/user2-160x160.jpg")} className="user-image" alt="User Image" />
-                                    <span className="hidden-xs">Alexander Pierce</span>
+                                    <span className="hidden-xs">肖荣涛</span>
                                 </a>
                                 <ul className="dropdown-menu">
                                     {/* User image */}
