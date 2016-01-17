@@ -31,7 +31,7 @@ class NavigationMenu extends React.Component {
                     <ul className="sidebar-menu">
                         <li className="header">功能区</li>
                         <li className="active treeview">
-                            <a href="#">
+                            <a href="/users">
                                 <i className="fa fa-dashboard"></i> 
                                 <span>
                                     用户管理
@@ -39,20 +39,20 @@ class NavigationMenu extends React.Component {
                             </a>
                         </li>
                         <li className="treeview">
-                            <a href="#">
+                            <a href="/depts">
                                 <i className="fa fa-files-o"></i>
                                 <span>部门管理</span>
                             </a>
                         </li>
                         <li>
-                            <a href="pages/widgets.html">
+                            <a href="/roles">
                                 <i className="fa fa-th"></i>
                                 <span>角色管理</span> 
                                 <small className="label pull-right bg-green">新</small>
                             </a>
                         </li>
                         <li className="treeview">
-                            <a href="#">
+                            <a href="/permissions">
                                 <i className="fa fa-pie-chart"></i>
                                 <span>权限配置</span>
                             </a>

@@ -38,7 +38,7 @@ function receiveUsers (result) {
   return { type : RECEIVE_USERS, items: result.users };
 }
 
-export function fetchUsers () {
+export function fetchRoles () {
 
     // Thunk middleware 知道如何处理函数。
     // 这里把 dispatch 方法通过参数的形式传给函数，

@@ -5,18 +5,16 @@ import { Link }       from 'react-router';
 
 import DataGrid       from 'react-datagrid';
 
-import { fetchUsers }           from '../actions/users';
+import { fetchRoles } from '../actions/roles';
 
 var columns = [
   { name: 'id', title: 'ID', width: 150 },
-  { name: 'login', title: '用户名'},
-  { name: 'email', title: '邮箱'},
-  { name: 'created_at', title: '注册时间'  },
-  { name: 'sign_in_count', title: '登录次数' },
-  { name: 'last_sign_in_at', title: '上次登录时间', width: 200 }
+  { name: 'name', title: '角色名称'},
+  { name: 'description', title: '角色描述'},
+  { name: 'created_at', title: '创建时间'  }
 ]
 
-class UserList extends React.Component {
+class RoleList extends React.Component {
   static propTypes = {
     users : React.PropTypes.array,
   }
@@ -27,7 +25,7 @@ class UserList extends React.Component {
 
   componentWillMount() {
     const {dispatch} = this.props;
-    dispatch(fetchUsers());
+    //dispatch(fetchUsers());
   }
 
   componentWillReceiveProps(nextProps) {
@@ -38,10 +36,10 @@ class UserList extends React.Component {
   render() {
     return(
       <DataGrid
-      dataSource='http://localhost:3001/v1/users'
+      dataSource='http://localhost:3001/v1/roles'
       idProperty='id'
       columns={columns} />);
   }
 }
 
-export default UserList;
+export default RoleList;

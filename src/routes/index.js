@@ -7,9 +7,9 @@ import Root                   from 'containers/root';
 import Users                  from 'containers/users';
 import NewUser                from 'containers/new-user';
 
+import Depts                  from 'containers/depts';
 
-import DeptsView              from 'containers/Dept';
-import RolesView              from 'containers/Role';
+import Roles                  from 'containers/role';
 import PermissionsView        from 'containers/Permission';
 
 export default (
@@ -18,8 +18,9 @@ export default (
     <Route      component={Users}  path='/users' />
     <Route      component={NewUser}  path='/users/new' />
     
-    <Route      component={DeptsView}  path='/dept' />
-    <Route      component={RolesView}  path='/role' />
+    <Route      component={Depts}  path='/depts' />
+    
+    <Route      component={Roles}  path='/roles' />
     <Route      component={PermissionsView}  path='/permission' />
   </Route>
 );

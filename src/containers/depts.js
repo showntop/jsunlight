@@ -1,21 +1,15 @@
 import React          from 'react';
 import { connect }    from 'react-redux';
+
 import { Link }       from 'react-router';
 
+import DeptTree       from "../components/dept-tree";
 
-import UserList       from '../components/user-list';
 
-
-function mapStateToProps (state) {
-
-  return {
-  };
-
-}
-
-export class UsersView extends React.Component {
+export class Depts extends React.Component {
   static propTypes = {
-    items : React.PropTypes.array,
+    
+
   }
 
   render () {
@@ -28,16 +22,24 @@ export class UsersView extends React.Component {
             <small>列表</small>
           </h1>
           <ul className="breadcrumb">
-            <li><a href="/users/new"><i className="fa fa-user-plus"></i>新建用户</a></li>
+            <li><a href="/depts/new"><i className="fa fa-user-plus"></i>新建部门</a></li>
           </ul>
         </section>
 
         <section className="content">
-          <UserList { ...this.props } />
+          <DeptTree { ...this.props } />
         </section>
-      </div>
+      </div>    
     );
   }
 }
 
-export default connect(mapStateToProps)(UsersView);
+function mapStateToProps(state) {
+
+  const {dept} = state;
+
+  return dept;
+
+}
+
+export default connect(mapStateToProps)(Depts);
